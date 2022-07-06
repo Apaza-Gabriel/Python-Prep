@@ -99,3 +99,17 @@ class Herramientas:
         if (numero > 1):
             numero = numero * self.__factorial(numero - 1)
         return numero
+
+import sys
+
+lista_elem = []
+for i,e in enumerate(sys.argv): # toma los parametros ingresados
+    if (i >0):
+        lista_elem.append(e) # imprime la lista de los parametros ingresados
+
+h = Herramientas(lista_elem)
+print(h.lista)
+
+# para ejecutarlo
+# python .\herramientas.py 1 2 3 4 5 
+# salida: ['1', '2', '3', '4', '5']
